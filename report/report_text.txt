@@ -199,8 +199,8 @@ weak point and monitor them through an independent path.
 
 6. Related work
 Frank [3] argues for monitoring across executions and versioned artifacts and states that it has no detector and no
-measured performance; our contribution is a measured detector and its failure modes. Makins et al. [7] study a
-fragmentation effect in multi-agent oversight; we have not tested our results against it. CAESAR [8] reports artifact
+measured performance; our contribution is a measured detector and its failure modes. Makins et al. [7] report a
+fragmentation effect; we cite it by identifier only and have not tested our results against it. CAESAR [8] reports artifact
 provenance as a useful monitoring signal in a multi-agent attack framework (we have read only its abstract).
 Percolation on random graphs [4, 5, 6] supplies the theory we test. Our search for prior measured work was not
 exhaustive.
@@ -215,7 +215,7 @@ public collusion.wiki export arm was not completed, so every number here is repl
 
 
 
-Isolation Audit · Apart Swarm Alignment Hackathon 2026, Track 4                                                   Page 5
+Isolation Audit · Apart Swarm Alignment Hackathon 2026, Track 4                                                      Page 5
 References
 [1] METR. OpenAI-Hugging Face incident investigation, 26 August 2026.
 https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
