@@ -11,3 +11,12 @@
    Both alert once per k newly flagged runs (re-arming), k calibrated to the same budget.
 5. Event-loss experiments: 'reads' mode drops read events only (matches the theory's independent-edge assumption); 'all' mode drops every
    raw event (more realistic, creation events are single points of failure). 'reads' is compared with theory; 'all' is reported as-is.
+
+6. TEST stage, first launch (test seeds 2000-2029): the process was killed by a sandbox restart after printing blocks T1-T3 and before any sweep finished.
+   No parameter, seed or code path was changed; only checkpointing of the long sweeps was added. The second launch must reproduce T1-T3 exactly
+   (checked against the first run's printed values: FPR 0.872, S_max {200: 4.2, 500: 9.7, 1000: 16.0}, ablation ratio 2.32, detected 0.97, t_flag 75.6 min).
+
+7. DEVIATION (logged after seeing test results): the attribution block of test_stage.py measured e as cross-run edge events per run (0.11), but the PREREG
+   quantity is "eligible events": every read of an agent-originated, non-allow-listed object, INCLUDING a run's own reads (each can become a spurious cross-run
+   edge when misattributed). The coarse grid also placed the transition between a=1.0 and a=0.95. experiments/attribution_fix.py recomputes e correctly and
+   uses a finer grid near 1. Prediction formula unchanged: onset at (1-a)e = (1-d_b)/2. Same test seeds, same thresholds.
