@@ -1,4 +1,5 @@
 PY=python3
+.PHONY: all calibrate test figures prereg attribution graph denominator realdata clean-results theory-checks
 export PYTHONPATH := $(shell pwd)
 
 calibrate:
@@ -21,6 +22,12 @@ graph:
 
 clean-results:
 	rm -f results/*.json results/*.log
+
+denominator:
+	$(PY) experiments/denominator.py
+
+realdata:
+	$(PY) realdata/real_data_arm.py data/wiki/ results/realdata/
 
 all: calibrate test attribution graph prereg figures
 

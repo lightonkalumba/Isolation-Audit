@@ -1,4 +1,5 @@
-numpy
-scipy
 matplotlib
+numpy
+pandas
 reportlab
+scipy
